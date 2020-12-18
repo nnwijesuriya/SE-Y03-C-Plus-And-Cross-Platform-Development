@@ -10,10 +10,8 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -25,9 +23,6 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QMenuBar *menubar;
-    QMenu *menuHome;
-    QMenu *menuAlbums;
-    QMenu *menuVideos;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -40,21 +35,10 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 26));
-        menuHome = new QMenu(menubar);
-        menuHome->setObjectName(QString::fromUtf8("menuHome"));
-        menuAlbums = new QMenu(menubar);
-        menuAlbums->setObjectName(QString::fromUtf8("menuAlbums"));
-        menuVideos = new QMenu(menubar);
-        menuVideos->setObjectName(QString::fromUtf8("menuVideos"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
-
-        menubar->addAction(menuHome->menuAction());
-        menubar->addAction(menuAlbums->menuAction());
-        menubar->addAction(menuVideos->menuAction());
 
         retranslateUi(MainWindow);
 
@@ -64,9 +48,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        menuHome->setTitle(QCoreApplication::translate("MainWindow", "Home", nullptr));
-        menuAlbums->setTitle(QCoreApplication::translate("MainWindow", "Albums", nullptr));
-        menuVideos->setTitle(QCoreApplication::translate("MainWindow", "Videos", nullptr));
     } // retranslateUi
 
 };
