@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>videos</class>
+ <widget class="QMainWindow" name="videos">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>801</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionhome"/>
+   </widget>
+   <widget class="QMenu" name="menuAudio">
+    <property name="title">
+     <string>Audio</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuVideo">
+    <property name="title">
+     <string>Video</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuAudio"/>
+   <addaction name="menuVideo"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="separator"/>
+   <addaction name="actionopen"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="actionplay"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="actionpause"/>
+   <addaction name="separator"/>
+  </widget>
+  <action name="actionplay">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/play.png</normaloff>:/img/images/play.png</iconset>
+   </property>
+   <property name="text">
+    <string>play</string>
+   </property>
+  </action>
+  <action name="actionpause">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/pause.png</normaloff>:/img/images/pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>pause</string>
+   </property>
+  </action>
+  <action name="actionopen">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/folder.png</normaloff>:/img/images/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open A File</string>
+   </property>
+  </action>
+  <action name="actionhome">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/home.png</normaloff>:/img/images/home.png</iconset>
+   </property>
+   <property name="text">
+    <string>home</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
