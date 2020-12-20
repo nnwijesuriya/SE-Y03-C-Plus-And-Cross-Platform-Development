@@ -14,8 +14,6 @@ MainWindow::~MainWindow()
 }
 
 
-
-
 void MainWindow::on_audio_clicked()
 {
     audio = new class audio(this);

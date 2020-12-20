@@ -15,6 +15,7 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -28,6 +29,7 @@ public:
     QAction *actionopen;
     QAction *actionhome;
     QWidget *centralwidget;
+    QSlider *verticalSlider;
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuAudio;
@@ -61,6 +63,10 @@ public:
         actionhome->setIcon(icon3);
         centralwidget = new QWidget(videos);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        verticalSlider = new QSlider(centralwidget);
+        verticalSlider->setObjectName(QString::fromUtf8("verticalSlider"));
+        verticalSlider->setGeometry(QRect(340, 540, 22, 160));
+        verticalSlider->setOrientation(Qt::Vertical);
         videos->setCentralWidget(centralwidget);
         menubar = new QMenuBar(videos);
         menubar->setObjectName(QString::fromUtf8("menubar"));

@@ -11,4 +11,50 @@ audio::audio(QWidget *parent) :
 audio::~audio()
 {
     delete ui;
+    player = new QMediaPlayer(this);
+
+    connect(player, &QMediaPlayer::positionChanged, this,&audio::on_positionChanged);
+    connect(player, &QMediaPlayer::durationChanged, this, &audio::on_durationChanged);
 }
+
+void audio::on_actionopen_triggered()
+{
+    QString filename = QFileDialog::getOpenFileName(this,"Open A File","","File(*.mp3)");
+    player->setMedia(QUrl::fromLocalFile(filename));
+
+}
+void audio::on_actionhome_triggered()
+{
+
+}
+void audio::on_actionpause_triggered()
+{
+player->pause();
+}
+void audio::on_actionplay_triggered()
+{
+player->play();
+}
+
+void audio::on_progress_sliderMoved(int position)
+{
+    player->setPosition(position);
+}
+
+void audio::on_volume_sliderMoved(int position)
+{
+    player->setVolume(position);
+}
+
+void audio::on_positionChanged(qint64 position)
+{
+ui->progress->setValue(position);
+}
+
+void audio::on_durationChanged(qint64 position)
+{
+ui->progress->setMaximum(position);
+}
+
+
+

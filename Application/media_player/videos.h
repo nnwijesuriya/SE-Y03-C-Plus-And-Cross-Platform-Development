@@ -6,6 +6,7 @@
 #include <QVideoWidget>
 #include <QFileDialog>
 #include <QProgressBar>
+#include <QSlider>
 
 namespace Ui {
 class videos;
@@ -33,6 +34,7 @@ private:
     QMediaPlayer* player;
     QVideoWidget* vw;
     QProgressBar* bar;
+    QSlider* slider;
 };
 
 #endif // VIDEOS_H

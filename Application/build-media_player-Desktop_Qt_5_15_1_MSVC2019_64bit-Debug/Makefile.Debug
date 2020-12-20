@@ -1219,8 +1219,6 @@ debug\videos.obj: ..\media_player\videos.cpp ..\media_player\videos.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qmenu.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QMenuBar \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qstatusbar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QToolBar \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtoolbar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QWidget

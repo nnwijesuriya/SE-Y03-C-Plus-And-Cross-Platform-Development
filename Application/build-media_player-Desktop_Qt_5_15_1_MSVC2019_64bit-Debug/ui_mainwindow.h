@@ -12,11 +12,13 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -29,10 +31,12 @@ public:
     QWidget *centralwidget;
     QLabel *label;
     QLabel *label_2;
-    QLabel *label_5;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout;
     QPushButton *audio;
-    QLabel *label_4;
     QPushButton *video;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents;
     QMenuBar *menubar;
     QMenu *menuHOMe;
     QMenu *menuAudio;
@@ -53,7 +57,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(360, 10, 261, 91));
+        label->setGeometry(QRect(360, 60, 261, 91));
         QFont font;
         font.setFamily(QString::fromUtf8("Arial"));
         font.setPointSize(22);
@@ -64,24 +68,34 @@ public:
         label->setTextFormat(Qt::RichText);
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(10, 240, 251, 31));
+        label_2->setGeometry(QRect(10, 210, 251, 31));
         label_2->setStyleSheet(QString::fromUtf8("font: 75 12pt \"Arial\";"));
-        label_5 = new QLabel(centralwidget);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(10, 110, 191, 101));
-        label_5->setPixmap(QPixmap(QString::fromUtf8(":/img/images/audio.png")));
-        audio = new QPushButton(centralwidget);
+        horizontalLayoutWidget = new QWidget(centralwidget);
+        horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
+        horizontalLayoutWidget->setGeometry(QRect(10, 140, 911, 61));
+        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        audio = new QPushButton(horizontalLayoutWidget);
         audio->setObjectName(QString::fromUtf8("audio"));
-        audio->setGeometry(QRect(210, 110, 241, 101));
         audio->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Arial\";"));
-        label_4 = new QLabel(centralwidget);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(490, 110, 181, 101));
-        label_4->setPixmap(QPixmap(QString::fromUtf8(":/img/images/video.png")));
-        video = new QPushButton(centralwidget);
+
+        horizontalLayout->addWidget(audio);
+
+        video = new QPushButton(horizontalLayoutWidget);
         video->setObjectName(QString::fromUtf8("video"));
-        video->setGeometry(QRect(680, 110, 251, 101));
         video->setStyleSheet(QString::fromUtf8("font: 16pt \"Arial\";"));
+
+        horizontalLayout->addWidget(video);
+
+        scrollArea = new QScrollArea(centralwidget);
+        scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
+        scrollArea->setGeometry(QRect(10, 250, 901, 281));
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 899, 279));
+        scrollArea->setWidget(scrollAreaWidgetContents);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -113,9 +127,7 @@ public:
         actionGo_To_Home->setText(QCoreApplication::translate("MainWindow", "Home", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Media Player", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Some Entertainment", nullptr));
-        label_5->setText(QString());
         audio->setText(QCoreApplication::translate("MainWindow", "Audio", nullptr));
-        label_4->setText(QString());
         video->setText(QCoreApplication::translate("MainWindow", "Video", nullptr));
         menuHOMe->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
         menuAudio->setTitle(QCoreApplication::translate("MainWindow", "Audio", nullptr));

@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>10</y>
+      <y>60</y>
       <width>261</width>
       <height>91</height>
      </rect>
@@ -45,7 +45,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>240</y>
+      <y>210</y>
       <width>251</width>
       <height>31</height>
      </rect>
@@ -57,69 +57,60 @@
      <string>Some Entertainment</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>110</y>
-      <width>191</width>
-      <height>101</height>
+      <y>140</y>
+      <width>911</width>
+      <height>61</height>
      </rect>
     </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="images.qrc">:/img/images/audio.png</pixmap>
-    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="audio">
+       <property name="styleSheet">
+        <string notr="true">font: 75 16pt &quot;Arial&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Audio</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="video">
+       <property name="styleSheet">
+        <string notr="true">font: 16pt &quot;Arial&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Video</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QPushButton" name="audio">
+   <widget class="QScrollArea" name="scrollArea">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>110</y>
-      <width>241</width>
-      <height>101</height>
+      <x>10</x>
+      <y>250</y>
+      <width>901</width>
+      <height>281</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 16pt &quot;Arial&quot;;</string>
+    <property name="widgetResizable">
+     <bool>true</bool>
     </property>
-    <property name="text">
-     <string>Audio</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>490</x>
-      <y>110</y>
-      <width>181</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="images.qrc">:/img/images/video.png</pixmap>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="video">
-    <property name="geometry">
-     <rect>
-      <x>680</x>
-      <y>110</y>
-      <width>251</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;Arial&quot;;</string>
-    </property>
-    <property name="text">
-     <string>Video</string>
-    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>899</width>
+       <height>279</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
