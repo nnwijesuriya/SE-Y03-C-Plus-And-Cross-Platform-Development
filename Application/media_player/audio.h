@@ -5,7 +5,6 @@
 #include <QSlider>
 #include <QMediaPlayer>
 #include <QFileDialog>
-#include <QDebug>
 
 namespace Ui {
 class audio;
@@ -22,11 +21,9 @@ public:
 private slots:
     void on_actionopen_triggered();
 
-    void on_actionhome_triggered();
+    void on_actionplay_triggered();
 
     void on_actionpause_triggered();
-
-    void on_actionplay_triggered();
 
     void on_progress_sliderMoved(int position);
 
@@ -35,6 +32,14 @@ private slots:
     void on_durationChanged(qint64);
 
     void on_positionChanged(qint64);
+
+    void on_actionstop_triggered();
+
+    void on_actionhome_triggered();
+
+    void on_actionmute_triggered();
+
+    void on_actionunmute_triggered();
 
 private:
     Ui::audio *ui;

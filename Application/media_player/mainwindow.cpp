@@ -12,17 +12,17 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-
 void MainWindow::on_audio_clicked()
 {
     audio = new class audio(this);
+    close();
     audio->show();
 }
 
 void MainWindow::on_video_clicked()
 {
     videos = new class videos(this);
+    close();
     videos->show();
 }
 

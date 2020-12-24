@@ -184,8 +184,11 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_images.cpp
 debug\qrc_images.cpp: ..\media_player\images.qrc \
 		C:\Qt\5.15.1\msvc2019_64\bin\rcc.exe \
+		..\media_player\images\stop.png \
+		..\media_player\images\sound.png \
 		..\media_player\images\play.png \
 		..\media_player\images\home.png \
+		..\media_player\images\mute.png \
 		..\media_player\images\video.png \
 		..\media_player\images\audio.png \
 		..\media_player\images\pause.png \
@@ -308,6 +311,33 @@ debug\moc_audio.cpp: ..\media_player\audio.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qicon.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QSlider \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\QMediaPlayer \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediaplayer.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qtmultimediaglobal.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qtmultimedia-config.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediaobject.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmultimedia.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediacontent.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediaresource.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtNetwork\qnetworkrequest.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtNetwork\qtnetworkglobal.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtNetwork\qtnetwork-config.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\QSharedDataPointer \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\QString \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\QUrl \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\QVariant \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediaenumdebug.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qmetaobject.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qaudio.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtNetwork\qnetworkconfiguration.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QFileDialog \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qdir.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qdialog.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.15.1\msvc2019_64\bin\moc.exe
 	C:\Qt\5.15.1\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include "C:/Users/Nidula Wijesuriya/Desktop/QT media player/build-media_player-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.15.1/msvc2019_64/mkspecs/win32-msvc -I"C:/Users/Nidula Wijesuriya/Desktop/QT media player/media_player" -IC:/Qt/5.15.1/msvc2019_64/include -IC:/Qt/5.15.1/msvc2019_64/include/QtMultimediaWidgets -IC:/Qt/5.15.1/msvc2019_64/include/QtMultimedia -IC:/Qt/5.15.1/msvc2019_64/include/QtWidgets -IC:/Qt/5.15.1/msvc2019_64/include/QtGui -IC:/Qt/5.15.1/msvc2019_64/include/QtANGLE -IC:/Qt/5.15.1/msvc2019_64/include/QtNetwork -IC:/Qt/5.15.1/msvc2019_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" ..\media_player\audio.h -o debug\moc_audio.cpp
@@ -420,7 +450,9 @@ debug\moc_mainwindow.cpp: ..\media_player\mainwindow.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qicon.h \
-		..\media_player\videos.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QSlider \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\QMediaPlayer \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediaplayer.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qtmultimediaglobal.h \
@@ -440,15 +472,16 @@ debug\moc_mainwindow.cpp: ..\media_player\mainwindow.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qmetaobject.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qaudio.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtNetwork\qnetworkconfiguration.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\QVideoWidget \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qvideowidget.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qtmultimediawidgetdefs.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediabindableinterface.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qfiledialog.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qdir.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qdialog.h \
+		..\media_player\videos.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\QVideoWidget \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qvideowidget.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qtmultimediawidgetdefs.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediabindableinterface.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QProgressBar \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qprogressbar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qframe.h \
@@ -594,6 +627,9 @@ debug\moc_videos.cpp: ..\media_player\videos.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QProgressBar \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qprogressbar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QSlider \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.15.1\msvc2019_64\bin\moc.exe
 	C:\Qt\5.15.1\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include "C:/Users/Nidula Wijesuriya/Desktop/QT media player/build-media_player-Desktop_Qt_5_15_1_MSVC2019_64bit-Debug/debug/moc_predefs.h" -IC:/Qt/5.15.1/msvc2019_64/mkspecs/win32-msvc -I"C:/Users/Nidula Wijesuriya/Desktop/QT media player/media_player" -IC:/Qt/5.15.1/msvc2019_64/include -IC:/Qt/5.15.1/msvc2019_64/include/QtMultimediaWidgets -IC:/Qt/5.15.1/msvc2019_64/include/QtMultimedia -IC:/Qt/5.15.1/msvc2019_64/include/QtWidgets -IC:/Qt/5.15.1/msvc2019_64/include/QtGui -IC:/Qt/5.15.1/msvc2019_64/include/QtANGLE -IC:/Qt/5.15.1/msvc2019_64/include/QtNetwork -IC:/Qt/5.15.1/msvc2019_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" ..\media_player\videos.h -o debug\moc_videos.cpp
@@ -736,8 +772,37 @@ debug\audio.obj: ..\media_player\audio.cpp ..\media_player\audio.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qicon.h \
-		ui_audio.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QSlider \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\QMediaPlayer \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediaplayer.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qtmultimediaglobal.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qtmultimedia-config.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediaobject.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmultimedia.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediacontent.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediaresource.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtNetwork\qnetworkrequest.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtNetwork\qtnetworkglobal.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtNetwork\qtnetwork-config.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\QSharedDataPointer \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\QString \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\QUrl \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\QVariant \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediaenumdebug.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qmetaobject.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qaudio.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtNetwork\qnetworkconfiguration.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QFileDialog \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qfiledialog.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qdir.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qfileinfo.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qdialog.h \
+		ui_audio.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QAction \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qaction.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qactiongroup.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QApplication \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qapplication.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qcoreapplication.h \
@@ -745,13 +810,15 @@ debug\audio.obj: ..\media_player\audio.cpp ..\media_player\audio.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qguiapplication.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QLabel \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qlabel.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QMenu \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qmenu.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QMenuBar \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qmenubar.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qmenu.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qactiongroup.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QStatusBar \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qstatusbar.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QToolBar \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtoolbar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QWidget
 
 debug\main.obj: ..\media_player\main.cpp ..\media_player\mainwindow.h \
@@ -862,7 +929,9 @@ debug\main.obj: ..\media_player\main.cpp ..\media_player\mainwindow.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qicon.h \
-		..\media_player\videos.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QSlider \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\QMediaPlayer \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediaplayer.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qtmultimediaglobal.h \
@@ -882,15 +951,16 @@ debug\main.obj: ..\media_player\main.cpp ..\media_player\mainwindow.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qmetaobject.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qaudio.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtNetwork\qnetworkconfiguration.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\QVideoWidget \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qvideowidget.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qtmultimediawidgetdefs.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediabindableinterface.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qfiledialog.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qdir.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qdialog.h \
+		..\media_player\videos.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\QVideoWidget \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qvideowidget.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qtmultimediawidgetdefs.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediabindableinterface.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QProgressBar \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qprogressbar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qframe.h \
@@ -1010,7 +1080,9 @@ debug\mainwindow.obj: ..\media_player\mainwindow.cpp ..\media_player\mainwindow.
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qicon.h \
-		..\media_player\videos.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QSlider \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\QMediaPlayer \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediaplayer.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qtmultimediaglobal.h \
@@ -1030,15 +1102,16 @@ debug\mainwindow.obj: ..\media_player\mainwindow.cpp ..\media_player\mainwindow.
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qmetaobject.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qaudio.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtNetwork\qnetworkconfiguration.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\QVideoWidget \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qvideowidget.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qtmultimediawidgetdefs.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediabindableinterface.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QFileDialog \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qfiledialog.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qdir.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qdialog.h \
+		..\media_player\videos.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\QVideoWidget \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qvideowidget.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimediaWidgets\qtmultimediawidgetdefs.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtMultimedia\qmediabindableinterface.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QProgressBar \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qprogressbar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qframe.h \
@@ -1053,6 +1126,11 @@ debug\mainwindow.obj: ..\media_player\mainwindow.cpp ..\media_player\mainwindow.
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qdesktopwidget.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qguiapplication.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qinputmethod.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QHBoxLayout \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qlayout.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qgridlayout.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QLabel \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qlabel.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QMenu \
@@ -1062,6 +1140,9 @@ debug\mainwindow.obj: ..\media_player\mainwindow.cpp ..\media_player\mainwindow.
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QPushButton \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qpushbutton.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QScrollArea \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qscrollarea.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QStatusBar \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qstatusbar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QWidget
@@ -1204,6 +1285,9 @@ debug\videos.obj: ..\media_player\videos.cpp ..\media_player\videos.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QProgressBar \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qprogressbar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qframe.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QSlider \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qslider.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractslider.h \
 		ui_videos.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QAction \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qaction.h \

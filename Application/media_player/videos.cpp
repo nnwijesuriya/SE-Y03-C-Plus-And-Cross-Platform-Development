@@ -24,9 +24,8 @@ videos::videos(QWidget *parent) :
     slider->setOrientation(Qt::Vertical);
     ui->toolBar->addWidget(slider);
     slider->setRange(0,100);
+    slider->setSliderPosition(100);
     connect(slider,&QSlider::sliderMoved,player,&QMediaPlayer::setVolume);
-
-
 }
 
 videos::~videos()

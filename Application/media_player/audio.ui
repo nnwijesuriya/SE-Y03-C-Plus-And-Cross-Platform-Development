@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>729</width>
-    <height>240</height>
+    <width>593</width>
+    <height>169</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QSlider" name="progress">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>50</y>
+      <x>110</x>
+      <y>20</y>
       <width>471</width>
       <height>21</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QSlider" name="volume">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>110</y>
+      <x>110</x>
+      <y>60</y>
       <width>471</width>
       <height>21</height>
      </rect>
@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>40</y>
+      <y>10</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -59,8 +59,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>100</y>
+      <x>10</x>
+      <y>60</y>
       <width>91</width>
       <height>31</height>
      </rect>
@@ -78,13 +78,13 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>729</width>
+     <width>593</width>
      <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>Home</string>
     </property>
     <addaction name="actionhome"/>
    </widget>
@@ -103,11 +103,24 @@
    <addaction name="actionopen"/>
    <addaction name="separator"/>
    <addaction name="separator"/>
+   <addaction name="separator"/>
    <addaction name="actionplay"/>
+   <addaction name="separator"/>
    <addaction name="separator"/>
    <addaction name="separator"/>
    <addaction name="actionpause"/>
    <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="actionstop"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="actionmute"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="actionunmute"/>
   </widget>
   <action name="actionplay">
    <property name="icon">
@@ -133,7 +146,7 @@
      <normaloff>:/img/images/home.png</normaloff>:/img/images/home.png</iconset>
    </property>
    <property name="text">
-    <string>Home</string>
+    <string>Go to dashboard</string>
    </property>
   </action>
   <action name="actionopen">
@@ -146,6 +159,33 @@
    </property>
    <property name="toolTip">
     <string>Open A File</string>
+   </property>
+  </action>
+  <action name="actionstop">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/stop.png</normaloff>:/img/images/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>stop</string>
+   </property>
+  </action>
+  <action name="actionmute">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/mute.png</normaloff>:/img/images/mute.png</iconset>
+   </property>
+   <property name="text">
+    <string>mute</string>
+   </property>
+  </action>
+  <action name="actionunmute">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/sound.png</normaloff>:/img/images/sound.png</iconset>
+   </property>
+   <property name="text">
+    <string>unmute</string>
    </property>
   </action>
  </widget>

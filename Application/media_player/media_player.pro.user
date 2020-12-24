@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.13.2, 2020-12-20T15:57:37. -->
+<!-- Written by QtCreator 4.13.2, 2020-12-24T13:43:39. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -325,8 +325,9 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Nidula Wijesuriya/Desktop/QT media player/media_player/media_player.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Nidula Wijesuriya/Desktop/QT media player/media_player/media_player.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">media_player2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/Nidula Wijesuriya/Documents/GitHub/SE-Y03-C-Plus-And-Cross-Platform-Development/Application/media_player/media_player.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/Nidula Wijesuriya/Documents/GitHub/SE-Y03-C-Plus-And-Cross-Platform-Development/Application/media_player/media_player.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>

@@ -29,6 +29,9 @@ public:
     QAction *actionpause;
     QAction *actionhome;
     QAction *actionopen;
+    QAction *actionstop;
+    QAction *actionmute;
+    QAction *actionunmute;
     QWidget *centralwidget;
     QSlider *progress;
     QSlider *volume;
@@ -42,7 +45,7 @@ public:
     {
         if (audio->objectName().isEmpty())
             audio->setObjectName(QString::fromUtf8("audio"));
-        audio->resize(729, 240);
+        audio->resize(593, 169);
         actionplay = new QAction(audio);
         actionplay->setObjectName(QString::fromUtf8("actionplay"));
         QIcon icon;
@@ -63,28 +66,43 @@ public:
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/img/images/folder.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionopen->setIcon(icon3);
+        actionstop = new QAction(audio);
+        actionstop->setObjectName(QString::fromUtf8("actionstop"));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/img/images/stop.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionstop->setIcon(icon4);
+        actionmute = new QAction(audio);
+        actionmute->setObjectName(QString::fromUtf8("actionmute"));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/img/images/mute.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionmute->setIcon(icon5);
+        actionunmute = new QAction(audio);
+        actionunmute->setObjectName(QString::fromUtf8("actionunmute"));
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/img/images/sound.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionunmute->setIcon(icon6);
         centralwidget = new QWidget(audio);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         progress = new QSlider(centralwidget);
         progress->setObjectName(QString::fromUtf8("progress"));
-        progress->setGeometry(QRect(120, 50, 471, 21));
+        progress->setGeometry(QRect(110, 20, 471, 21));
         progress->setOrientation(Qt::Horizontal);
         volume = new QSlider(centralwidget);
         volume->setObjectName(QString::fromUtf8("volume"));
-        volume->setGeometry(QRect(120, 110, 471, 21));
+        volume->setGeometry(QRect(110, 60, 471, 21));
         volume->setOrientation(Qt::Horizontal);
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(10, 40, 91, 31));
+        label->setGeometry(QRect(10, 10, 91, 31));
         label->setStyleSheet(QString::fromUtf8("font: 14pt \"Arial\";"));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(20, 100, 91, 31));
+        label_2->setGeometry(QRect(10, 60, 91, 31));
         label_2->setStyleSheet(QString::fromUtf8("font: 14pt \"Arial\";"));
         audio->setCentralWidget(centralwidget);
         menubar = new QMenuBar(audio);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 729, 26));
+        menubar->setGeometry(QRect(0, 0, 593, 26));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         audio->setMenuBar(menubar);
@@ -97,11 +115,24 @@ public:
         toolBar->addAction(actionopen);
         toolBar->addSeparator();
         toolBar->addSeparator();
+        toolBar->addSeparator();
         toolBar->addAction(actionplay);
+        toolBar->addSeparator();
         toolBar->addSeparator();
         toolBar->addSeparator();
         toolBar->addAction(actionpause);
         toolBar->addSeparator();
+        toolBar->addSeparator();
+        toolBar->addSeparator();
+        toolBar->addAction(actionstop);
+        toolBar->addSeparator();
+        toolBar->addSeparator();
+        toolBar->addSeparator();
+        toolBar->addAction(actionmute);
+        toolBar->addSeparator();
+        toolBar->addSeparator();
+        toolBar->addSeparator();
+        toolBar->addAction(actionunmute);
 
         retranslateUi(audio);
 
@@ -113,14 +144,17 @@ public:
         audio->setWindowTitle(QCoreApplication::translate("audio", "MainWindow", nullptr));
         actionplay->setText(QCoreApplication::translate("audio", "play", nullptr));
         actionpause->setText(QCoreApplication::translate("audio", "pause", nullptr));
-        actionhome->setText(QCoreApplication::translate("audio", "Home", nullptr));
+        actionhome->setText(QCoreApplication::translate("audio", "Go to dashboard", nullptr));
         actionopen->setText(QCoreApplication::translate("audio", "open", nullptr));
 #if QT_CONFIG(tooltip)
         actionopen->setToolTip(QCoreApplication::translate("audio", "Open A File", nullptr));
 #endif // QT_CONFIG(tooltip)
+        actionstop->setText(QCoreApplication::translate("audio", "stop", nullptr));
+        actionmute->setText(QCoreApplication::translate("audio", "mute", nullptr));
+        actionunmute->setText(QCoreApplication::translate("audio", "unmute", nullptr));
         label->setText(QCoreApplication::translate("audio", "Duration", nullptr));
         label_2->setText(QCoreApplication::translate("audio", "Volume", nullptr));
-        menuFile->setTitle(QCoreApplication::translate("audio", "File", nullptr));
+        menuFile->setTitle(QCoreApplication::translate("audio", "Home", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("audio", "toolBar", nullptr));
     } // retranslateUi
 

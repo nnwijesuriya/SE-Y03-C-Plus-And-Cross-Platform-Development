@@ -47,7 +47,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(938, 587);
+        MainWindow->resize(938, 496);
         actionGo_To_Home = new QAction(MainWindow);
         actionGo_To_Home->setObjectName(QString::fromUtf8("actionGo_To_Home"));
         QIcon icon;
@@ -57,7 +57,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(360, 60, 261, 91));
+        label->setGeometry(QRect(340, -20, 261, 91));
         QFont font;
         font.setFamily(QString::fromUtf8("Arial"));
         font.setPointSize(22);
@@ -68,11 +68,11 @@ public:
         label->setTextFormat(Qt::RichText);
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(10, 210, 251, 31));
+        label_2->setGeometry(QRect(10, 130, 251, 31));
         label_2->setStyleSheet(QString::fromUtf8("font: 75 12pt \"Arial\";"));
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
-        horizontalLayoutWidget->setGeometry(QRect(10, 140, 911, 61));
+        horizontalLayoutWidget->setGeometry(QRect(10, 60, 911, 61));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -90,7 +90,7 @@ public:
 
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
-        scrollArea->setGeometry(QRect(10, 250, 901, 281));
+        scrollArea->setGeometry(QRect(10, 160, 901, 281));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
