@@ -300,6 +300,7 @@ Makefile: ..\media_player\media_player.pro C:\Qt\5.15.1\msvc2019_64\mkspecs\win3
 		C:\Qt\5.15.1\msvc2019_64\lib\Qt5Core.prl \
 		C:\Qt\5.15.1\msvc2019_64\lib\qtmain.prl \
 		C:\Qt\5.15.1\msvc2019_64\mkspecs\features\build_pass.prf \
+		..\media_player\entertainment.qrc \
 		..\media_player\images.qrc \
 		C:\Qt\5.15.1\msvc2019_64\lib\Qt5MultimediaWidgetsd.prl \
 		C:\Qt\5.15.1\msvc2019_64\lib\Qt5Multimediad.prl \
@@ -525,6 +526,7 @@ C:\Qt\5.15.1\msvc2019_64\lib\Qt5Network.prl:
 C:\Qt\5.15.1\msvc2019_64\lib\Qt5Core.prl:
 C:\Qt\5.15.1\msvc2019_64\lib\qtmain.prl:
 C:\Qt\5.15.1\msvc2019_64\mkspecs\features\build_pass.prf:
+..\media_player\entertainment.qrc:
 ..\media_player\images.qrc:
 C:\Qt\5.15.1\msvc2019_64\lib\Qt5MultimediaWidgetsd.prl:
 C:\Qt\5.15.1\msvc2019_64\lib\Qt5Multimediad.prl:

@@ -43,18 +43,13 @@
     </property>
     <addaction name="actionhome"/>
    </widget>
-   <widget class="QMenu" name="menuAudio">
-    <property name="title">
-     <string>Audio</string>
-    </property>
-   </widget>
    <widget class="QMenu" name="menuVideo">
     <property name="title">
      <string>Video</string>
     </property>
+    <addaction name="actionopen"/>
    </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuAudio"/>
    <addaction name="menuVideo"/>
   </widget>
   <widget class="QToolBar" name="toolBar">

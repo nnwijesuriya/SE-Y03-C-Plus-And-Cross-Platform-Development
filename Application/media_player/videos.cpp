@@ -54,5 +54,5 @@ void videos::on_actionplay_triggered()
 
 void videos::on_actionhome_triggered()
 {
-
+//have to do
 }

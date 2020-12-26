@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[5];
-    char stringdata0[76];
+    QByteArrayData data[7];
+    char stringdata0[93];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,11 +36,14 @@ QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
 QT_MOC_LITERAL(1, 11, 16), // "on_audio_clicked"
 QT_MOC_LITERAL(2, 28, 0), // ""
 QT_MOC_LITERAL(3, 29, 16), // "on_video_clicked"
-QT_MOC_LITERAL(4, 46, 29) // "on_actionGo_To_Home_triggered"
+QT_MOC_LITERAL(4, 46, 24), // "on_entertain_itemClicked"
+QT_MOC_LITERAL(5, 71, 16), // "QListWidgetItem*"
+QT_MOC_LITERAL(6, 88, 4) // "item"
 
     },
     "MainWindow\0on_audio_clicked\0\0"
-    "on_video_clicked\0on_actionGo_To_Home_triggered"
+    "on_video_clicked\0on_entertain_itemClicked\0"
+    "QListWidgetItem*\0item"
 };
 #undef QT_MOC_LITERAL
 
@@ -60,12 +63,12 @@ static const uint qt_meta_data_MainWindow[] = {
  // slots: name, argc, parameters, tag, flags
        1,    0,   29,    2, 0x08 /* Private */,
        3,    0,   30,    2, 0x08 /* Private */,
-       4,    0,   31,    2, 0x08 /* Private */,
+       4,    1,   31,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 5,    6,
 
        0        // eod
 };
@@ -78,11 +81,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->on_audio_clicked(); break;
         case 1: _t->on_video_clicked(); break;
-        case 2: _t->on_actionGo_To_Home_triggered(); break;
+        case 2: _t->on_entertain_itemClicked((*reinterpret_cast< QListWidgetItem*(*)>(_a[1]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject MainWindow::staticMetaObject = { {

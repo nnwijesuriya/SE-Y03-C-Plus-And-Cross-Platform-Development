@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 #include "audio.h"
 #include "videos.h"
+#include "QListWidget"
 
 
 #include <QMainWindow>
@@ -24,7 +25,7 @@ private slots:
 
     void on_video_clicked();
 
-    void on_actionGo_To_Home_triggered();
+    void on_entertain_itemClicked(QListWidgetItem *item);
 
 private:
     Ui::MainWindow *ui;

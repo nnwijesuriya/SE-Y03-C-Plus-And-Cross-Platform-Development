@@ -32,7 +32,6 @@ public:
     QSlider *verticalSlider;
     QMenuBar *menubar;
     QMenu *menuFile;
-    QMenu *menuAudio;
     QMenu *menuVideo;
     QToolBar *toolBar;
 
@@ -73,8 +72,6 @@ public:
         menubar->setGeometry(QRect(0, 0, 801, 26));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
-        menuAudio = new QMenu(menubar);
-        menuAudio->setObjectName(QString::fromUtf8("menuAudio"));
         menuVideo = new QMenu(menubar);
         menuVideo->setObjectName(QString::fromUtf8("menuVideo"));
         videos->setMenuBar(menubar);
@@ -83,9 +80,9 @@ public:
         videos->addToolBar(Qt::BottomToolBarArea, toolBar);
 
         menubar->addAction(menuFile->menuAction());
-        menubar->addAction(menuAudio->menuAction());
         menubar->addAction(menuVideo->menuAction());
         menuFile->addAction(actionhome);
+        menuVideo->addAction(actionopen);
         toolBar->addSeparator();
         toolBar->addAction(actionopen);
         toolBar->addSeparator();
@@ -112,7 +109,6 @@ public:
 #endif // QT_CONFIG(tooltip)
         actionhome->setText(QCoreApplication::translate("videos", "home", nullptr));
         menuFile->setTitle(QCoreApplication::translate("videos", "File", nullptr));
-        menuAudio->setTitle(QCoreApplication::translate("videos", "Audio", nullptr));
         menuVideo->setTitle(QCoreApplication::translate("videos", "Video", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("videos", "toolBar", nullptr));
     } // retranslateUi

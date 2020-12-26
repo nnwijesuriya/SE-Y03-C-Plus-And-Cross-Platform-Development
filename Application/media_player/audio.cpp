@@ -29,20 +29,20 @@ void audio::on_actionopen_triggered()
 
 void audio::on_actionplay_triggered()
 {
-      player->play();
+    player->play();
 }
 
 void audio::on_actionpause_triggered()
 {
-      player->pause();
+    player->pause();
 }
 void audio::on_actionstop_triggered()
 {
-
+    player->stop();
 }
 void audio::on_actionhome_triggered()
 {
-   player->stop();
+  //will have to do
 }
 void audio::on_progress_sliderMoved(int position)
 {

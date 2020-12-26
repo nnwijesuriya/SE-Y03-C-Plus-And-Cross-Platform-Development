@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/entertainment ">
+        <file>media/Forest.mp4</file>
+        <file>media/River.mp4</file>
+    </qresource>
+</RCC>
