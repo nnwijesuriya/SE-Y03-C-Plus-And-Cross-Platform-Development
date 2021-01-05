@@ -32,6 +32,7 @@ public:
     QAction *actionstop;
     QAction *actionmute;
     QAction *actionunmute;
+    QAction *actionclose;
     QWidget *centralwidget;
     QSlider *progress;
     QSlider *volume;
@@ -54,33 +55,38 @@ public:
         actionpause = new QAction(audio);
         actionpause->setObjectName(QString::fromUtf8("actionpause"));
         QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/img/images/pause.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QString::fromUtf8(":/img/images/pause.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionpause->setIcon(icon1);
         actionhome = new QAction(audio);
         actionhome->setObjectName(QString::fromUtf8("actionhome"));
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/img/images/home.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QString::fromUtf8(":/img/images/home.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionhome->setIcon(icon2);
         actionopen = new QAction(audio);
         actionopen->setObjectName(QString::fromUtf8("actionopen"));
         QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/img/images/folder.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QString::fromUtf8(":/img/images/folder.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionopen->setIcon(icon3);
         actionstop = new QAction(audio);
         actionstop->setObjectName(QString::fromUtf8("actionstop"));
         QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/img/images/stop.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QString::fromUtf8(":/img/images/stop.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionstop->setIcon(icon4);
         actionmute = new QAction(audio);
         actionmute->setObjectName(QString::fromUtf8("actionmute"));
         QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/img/images/mute.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon5.addFile(QString::fromUtf8(":/img/images/mute.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionmute->setIcon(icon5);
         actionunmute = new QAction(audio);
         actionunmute->setObjectName(QString::fromUtf8("actionunmute"));
         QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/img/images/sound.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon6.addFile(QString::fromUtf8(":/img/images/sound.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionunmute->setIcon(icon6);
+        actionclose = new QAction(audio);
+        actionclose->setObjectName(QString::fromUtf8("actionclose"));
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/img/images/close.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionclose->setIcon(icon7);
         centralwidget = new QWidget(audio);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         progress = new QSlider(centralwidget);
@@ -111,7 +117,10 @@ public:
         audio->addToolBar(Qt::BottomToolBarArea, toolBar);
 
         menubar->addAction(menuFile->menuAction());
+        menuFile->addSeparator();
         menuFile->addAction(actionhome);
+        menuFile->addSeparator();
+        menuFile->addAction(actionclose);
         toolBar->addAction(actionopen);
         toolBar->addSeparator();
         toolBar->addSeparator();
@@ -152,9 +161,10 @@ public:
         actionstop->setText(QCoreApplication::translate("audio", "stop", nullptr));
         actionmute->setText(QCoreApplication::translate("audio", "mute", nullptr));
         actionunmute->setText(QCoreApplication::translate("audio", "unmute", nullptr));
+        actionclose->setText(QCoreApplication::translate("audio", "Close", nullptr));
         label->setText(QCoreApplication::translate("audio", "Duration", nullptr));
         label_2->setText(QCoreApplication::translate("audio", "Volume", nullptr));
-        menuFile->setTitle(QCoreApplication::translate("audio", "Home", nullptr));
+        menuFile->setTitle(QCoreApplication::translate("audio", "Options", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("audio", "toolBar", nullptr));
     } // retranslateUi
 

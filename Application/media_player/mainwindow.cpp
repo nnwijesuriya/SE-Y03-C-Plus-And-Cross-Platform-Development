@@ -4,12 +4,14 @@
 #include "QMessageBox"
 #include "videos.h"
 #include "QDir"
+#include "QIcon"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setFixedSize(this->width(),this->height());
 
     //What this does is search the resouse folder and show all the media available to the users in the main window
     QDir dir(":/entertainment /media");
@@ -19,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
         QListWidgetItem *item = new QListWidgetItem(file.fileName());
         item->setData(Qt::UserRole, file.absolutePath());
         item->setIcon(QIcon(":/img/images/video.png"));
-        ui->entertain->addItem(dir.dirName());
+        ui->entertain->addItem(item);
     }
 }
 MainWindow::~MainWindow()

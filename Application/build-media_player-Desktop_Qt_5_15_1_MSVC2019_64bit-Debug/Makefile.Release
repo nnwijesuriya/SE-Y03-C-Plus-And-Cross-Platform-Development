@@ -191,14 +191,15 @@ release\qrc_entertainment.cpp: ..\media_player\entertainment.qrc \
 
 release\qrc_images.cpp: ..\media_player\images.qrc \
 		C:\Qt\5.15.1\msvc2019_64\bin\rcc.exe \
-		..\media_player\images\stop.png \
-		..\media_player\images\sound.png \
 		..\media_player\images\play.png \
-		..\media_player\images\home.png \
-		..\media_player\images\mute.png \
 		..\media_player\images\video.png \
-		..\media_player\images\pause.png \
-		..\media_player\images\folder.png
+		..\media_player\images\pause.jpg \
+		..\media_player\images\folder.jpg \
+		..\media_player\images\stop.jpg \
+		..\media_player\images\sound.jpg \
+		..\media_player\images\close.jpg \
+		..\media_player\images\mute.jpg \
+		..\media_player\images\home.jpg
 	C:\Qt\5.15.1\msvc2019_64\bin\rcc.exe -name images ..\media_player\images.qrc -o release\qrc_images.cpp
 
 compiler_moc_predefs_make_all: release\moc_predefs.h
@@ -1189,7 +1190,9 @@ release\mainwindow.obj: ..\media_player\mainwindow.cpp ..\media_player\mainwindo
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractbutton.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QWidget \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QMessageBox \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qmessagebox.h
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qmessagebox.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\QDir \
+		C:\Qt\5.15.1\msvc2019_64\include\QtGui\QIcon
 
 release\videos.obj: ..\media_player\videos.cpp ..\media_player\videos.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QMainWindow \

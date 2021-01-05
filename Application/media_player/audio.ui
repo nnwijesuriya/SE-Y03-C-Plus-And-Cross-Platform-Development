@@ -84,9 +84,12 @@
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>Home</string>
+     <string>Options</string>
     </property>
+    <addaction name="separator"/>
     <addaction name="actionhome"/>
+    <addaction name="separator"/>
+    <addaction name="actionclose"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
@@ -134,7 +137,7 @@
   <action name="actionpause">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/pause.png</normaloff>:/img/images/pause.png</iconset>
+     <normaloff>:/img/images/pause.jpg</normaloff>:/img/images/pause.jpg</iconset>
    </property>
    <property name="text">
     <string>pause</string>
@@ -143,7 +146,7 @@
   <action name="actionhome">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/home.png</normaloff>:/img/images/home.png</iconset>
+     <normaloff>:/img/images/home.jpg</normaloff>:/img/images/home.jpg</iconset>
    </property>
    <property name="text">
     <string>Go to dashboard</string>
@@ -152,7 +155,7 @@
   <action name="actionopen">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/folder.png</normaloff>:/img/images/folder.png</iconset>
+     <normaloff>:/img/images/folder.jpg</normaloff>:/img/images/folder.jpg</iconset>
    </property>
    <property name="text">
     <string>open</string>
@@ -164,7 +167,7 @@
   <action name="actionstop">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/stop.png</normaloff>:/img/images/stop.png</iconset>
+     <normaloff>:/img/images/stop.jpg</normaloff>:/img/images/stop.jpg</iconset>
    </property>
    <property name="text">
     <string>stop</string>
@@ -173,7 +176,7 @@
   <action name="actionmute">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/mute.png</normaloff>:/img/images/mute.png</iconset>
+     <normaloff>:/img/images/mute.jpg</normaloff>:/img/images/mute.jpg</iconset>
    </property>
    <property name="text">
     <string>mute</string>
@@ -182,10 +185,19 @@
   <action name="actionunmute">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/sound.png</normaloff>:/img/images/sound.png</iconset>
+     <normaloff>:/img/images/sound.jpg</normaloff>:/img/images/sound.jpg</iconset>
    </property>
    <property name="text">
     <string>unmute</string>
+   </property>
+  </action>
+  <action name="actionclose">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/close.jpg</normaloff>:/img/images/close.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Close</string>
    </property>
   </action>
  </widget>

@@ -39,7 +39,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(752, 442);
-        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(177, 177, 177)"));
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(189, 189, 189)"));
         actionGo_To_Home = new QAction(MainWindow);
         actionGo_To_Home->setObjectName(QString::fromUtf8("actionGo_To_Home"));
         QIcon icon;
@@ -87,7 +87,7 @@ public:
         entertain = new QListWidget(centralwidget);
         entertain->setObjectName(QString::fromUtf8("entertain"));
         entertain->setGeometry(QRect(20, 180, 711, 241));
-        entertain->setStyleSheet(QString::fromUtf8("background-color:rgb(200, 200, 200)"));
+        entertain->setStyleSheet(QString::fromUtf8("background-color: rgb(208, 208, 208);"));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);

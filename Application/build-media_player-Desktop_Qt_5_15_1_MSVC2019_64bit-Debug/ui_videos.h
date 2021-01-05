@@ -29,6 +29,7 @@ public:
     QAction *actionopen;
     QAction *actionhome;
     QAction *actionmute;
+    QAction *actionClose;
     QWidget *centralwidget;
     QSlider *verticalSlider;
     QMenuBar *menubar;
@@ -49,23 +50,28 @@ public:
         actionpause = new QAction(videos);
         actionpause->setObjectName(QString::fromUtf8("actionpause"));
         QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/img/images/pause.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QString::fromUtf8(":/img/images/pause.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionpause->setIcon(icon1);
         actionopen = new QAction(videos);
         actionopen->setObjectName(QString::fromUtf8("actionopen"));
         QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/img/images/folder.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon2.addFile(QString::fromUtf8(":/img/images/folder.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionopen->setIcon(icon2);
         actionhome = new QAction(videos);
         actionhome->setObjectName(QString::fromUtf8("actionhome"));
         QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/img/images/home.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QString::fromUtf8(":/img/images/home.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionhome->setIcon(icon3);
         actionmute = new QAction(videos);
         actionmute->setObjectName(QString::fromUtf8("actionmute"));
         QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/img/images/mute.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QString::fromUtf8(":/img/images/mute.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionmute->setIcon(icon4);
+        actionClose = new QAction(videos);
+        actionClose->setObjectName(QString::fromUtf8("actionClose"));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/img/images/close.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionClose->setIcon(icon5);
         centralwidget = new QWidget(videos);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalSlider = new QSlider(centralwidget);
@@ -87,9 +93,15 @@ public:
 
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuVideo->menuAction());
+        menuFile->addSeparator();
+        menuFile->addAction(actionopen);
+        menuFile->addSeparator();
         menuFile->addAction(actionhome);
-        menuVideo->addAction(actionopen);
+        menuFile->addSeparator();
+        menuFile->addAction(actionClose);
+        menuVideo->addSeparator();
         menuVideo->addAction(actionplay);
+        menuVideo->addSeparator();
         menuVideo->addAction(actionpause);
         toolBar->addSeparator();
         toolBar->addAction(actionopen);
@@ -121,7 +133,8 @@ public:
 #endif // QT_CONFIG(tooltip)
         actionhome->setText(QCoreApplication::translate("videos", "home", nullptr));
         actionmute->setText(QCoreApplication::translate("videos", "mute", nullptr));
-        menuFile->setTitle(QCoreApplication::translate("videos", "File", nullptr));
+        actionClose->setText(QCoreApplication::translate("videos", "Close", nullptr));
+        menuFile->setTitle(QCoreApplication::translate("videos", "Options", nullptr));
         menuVideo->setTitle(QCoreApplication::translate("videos", "Video", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("videos", "toolBar", nullptr));
     } // retranslateUi

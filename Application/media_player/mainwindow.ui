@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(177, 177, 177)</string>
+   <string notr="true">background-color: rgb(189, 189, 189)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="label">
@@ -106,13 +106,13 @@ background-color: rgb(83, 255, 83)</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color:rgb(200, 200, 200)</string>
+     <string notr="true">background-color: rgb(208, 208, 208);</string>
     </property>
    </widget>
   </widget>
   <action name="actionGo_To_Home">
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/img/images/home.png</normaloff>:/img/images/home.png</iconset>
    </property>
    <property name="text">
@@ -120,8 +120,6 @@ background-color: rgb(83, 255, 83)</string>
    </property>
   </action>
  </widget>
- <resources>
-  <include location="images.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

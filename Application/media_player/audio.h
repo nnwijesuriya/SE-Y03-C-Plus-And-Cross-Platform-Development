@@ -41,6 +41,8 @@ private slots:
 
     void on_actionunmute_triggered();
 
+    void on_actionclose_triggered();
+
 private:
     Ui::audio *ui;
     QSlider* slider;

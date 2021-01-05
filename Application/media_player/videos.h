@@ -30,6 +30,8 @@ private slots:
 
     void recivedata(QString);
 
+    void on_actionClose_triggered();
+
 private:
     Ui::videos *ui;
     QMediaPlayer* Mplayer;

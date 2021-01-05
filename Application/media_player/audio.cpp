@@ -6,6 +6,7 @@ audio::audio(QWidget *parent) :
     ui(new Ui::audio)
 {
     ui->setupUi(this);
+    this->setFixedSize(this->width(),this->height());
 
     Mplayer = new QMediaPlayer(this);
 
@@ -73,4 +74,9 @@ void audio::on_actionmute_triggered()
 void audio::on_actionunmute_triggered()
 {
      Mplayer->setVolume(60);
+}
+
+void audio::on_actionclose_triggered()
+{
+QCoreApplication::quit();
 }

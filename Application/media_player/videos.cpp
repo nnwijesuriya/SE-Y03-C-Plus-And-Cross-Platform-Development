@@ -64,3 +64,8 @@ void videos::recivedata(QString data)
     Mplayer->setMedia(QUrl(data));
     on_actionplay_triggered();
 }
+
+void videos::on_actionClose_triggered()
+{
+QCoreApplication::quit();
+}
