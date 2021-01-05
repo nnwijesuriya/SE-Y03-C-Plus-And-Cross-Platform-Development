@@ -7,6 +7,7 @@
 #include <QFileDialog>
 #include <QProgressBar>
 #include <QSlider>
+
 namespace Ui {
 class videos;
 }
@@ -31,6 +32,8 @@ private slots:
     void recivedata(QString);
 
     void on_actionClose_triggered();
+
+    void closeEvent(QCloseEvent *event);
 
 private:
     Ui::videos *ui;

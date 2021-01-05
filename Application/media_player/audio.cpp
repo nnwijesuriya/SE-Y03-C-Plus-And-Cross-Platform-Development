@@ -1,5 +1,6 @@
 #include "audio.h"
 #include "ui_audio.h"
+#include <QCloseEvent>
 
 audio::audio(QWidget *parent) :
     QMainWindow(parent),
@@ -58,12 +59,12 @@ void audio::on_volume_sliderMoved(int position)
 
 void audio::on_positionChanged(qint64 position)
 {
-ui->progress->setValue(position);
+    ui->progress->setValue(position);
 }
 
 void audio::on_durationChanged(qint64 position)
 {
-ui->progress->setMaximum(position);
+    ui->progress->setMaximum(position);
 }
 
 void audio::on_actionmute_triggered()
@@ -78,5 +79,12 @@ void audio::on_actionunmute_triggered()
 
 void audio::on_actionclose_triggered()
 {
-QCoreApplication::quit();
+   Mplayer->stop();
+   close();
+}
+
+void audio::closeEvent (QCloseEvent *event)
+{
+    Mplayer->stop();
+    event->accept();
 }

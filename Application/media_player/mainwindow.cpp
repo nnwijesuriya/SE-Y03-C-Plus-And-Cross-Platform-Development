@@ -30,16 +30,14 @@ MainWindow::~MainWindow()
 }
 void MainWindow::on_audio_clicked()
 {
-    //closes the main window and opens the audio window
-    close();
+    //opens the audio window
     audio = new class audio(this);
     audio->show();
 }
 
 void MainWindow::on_video_clicked()
 {
-    //closes the main window and opens the video window
-    close();
+    //opens the video window
     videos = new class videos(this);
     videos->show();
 }

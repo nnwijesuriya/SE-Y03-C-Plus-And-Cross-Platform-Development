@@ -2,6 +2,7 @@
 #include "ui_videos.h"
 #include "QMessageBox"
 #include "mainwindow.h"
+#include <QCloseEvent>
 
 videos::videos(QWidget *parent) :
     QMainWindow(parent),
@@ -67,5 +68,12 @@ void videos::recivedata(QString data)
 
 void videos::on_actionClose_triggered()
 {
-QCoreApplication::quit();
+    Mplayer->stop();
+    close();
+}
+
+void videos::closeEvent (QCloseEvent *event)
+{
+    Mplayer->stop();
+    event->accept();
 }

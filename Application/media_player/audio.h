@@ -43,6 +43,8 @@ private slots:
 
     void on_actionclose_triggered();
 
+    void closeEvent(QCloseEvent *event);
+
 private:
     Ui::audio *ui;
     QSlider* slider;
