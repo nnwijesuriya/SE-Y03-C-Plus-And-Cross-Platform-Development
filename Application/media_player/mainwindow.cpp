@@ -11,7 +11,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    //restricts the user from maximizing the page
     this->setFixedSize(this->width(),this->height());
+    //sets a title for the page
+    this->setWindowTitle("Home");
 
     //What this does is search the resouse folder and show all the media available to the users in the main window
     QDir dir(":/entertainment /media");
@@ -24,24 +28,27 @@ MainWindow::MainWindow(QWidget *parent)
         ui->entertain->addItem(item);
     }
 }
+
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+//opens the audio window
 void MainWindow::on_audio_clicked()
 {
-    //opens the audio window
     audio = new class audio(this);
     audio->show();
 }
 
+//opens the video window
 void MainWindow::on_video_clicked()
 {
-    //opens the video window
     videos = new class videos(this);
     videos->show();
 }
 
+//when users clicks a video from entertainment area it gets the path and sends it to the video window to play the file
 void MainWindow::on_entertain_itemClicked(QListWidgetItem *item)
 {
     QDir Originalpath(":/entertainment /media");

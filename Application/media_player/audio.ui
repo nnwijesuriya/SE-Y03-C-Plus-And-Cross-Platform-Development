@@ -87,7 +87,7 @@
      <string>Options</string>
     </property>
     <addaction name="separator"/>
-    <addaction name="actionhome"/>
+    <addaction name="actionopen"/>
     <addaction name="separator"/>
     <addaction name="actionclose"/>
    </widget>
@@ -141,15 +141,6 @@
    </property>
    <property name="text">
     <string>pause</string>
-   </property>
-  </action>
-  <action name="actionhome">
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/img/images/home.jpg</normaloff>:/img/images/home.jpg</iconset>
-   </property>
-   <property name="text">
-    <string>Go to dashboard</string>
    </property>
   </action>
   <action name="actionopen">

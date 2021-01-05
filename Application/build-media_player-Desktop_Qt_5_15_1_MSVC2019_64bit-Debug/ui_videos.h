@@ -27,7 +27,6 @@ public:
     QAction *actionplay;
     QAction *actionpause;
     QAction *actionopen;
-    QAction *actionhome;
     QAction *actionmute;
     QAction *actionClose;
     QWidget *centralwidget;
@@ -41,7 +40,7 @@ public:
     {
         if (videos->objectName().isEmpty())
             videos->setObjectName(QString::fromUtf8("videos"));
-        videos->resize(1054, 595);
+        videos->resize(1161, 669);
         actionplay = new QAction(videos);
         actionplay->setObjectName(QString::fromUtf8("actionplay"));
         QIcon icon;
@@ -57,21 +56,16 @@ public:
         QIcon icon2;
         icon2.addFile(QString::fromUtf8(":/img/images/folder.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionopen->setIcon(icon2);
-        actionhome = new QAction(videos);
-        actionhome->setObjectName(QString::fromUtf8("actionhome"));
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/img/images/home.jpg"), QSize(), QIcon::Normal, QIcon::Off);
-        actionhome->setIcon(icon3);
         actionmute = new QAction(videos);
         actionmute->setObjectName(QString::fromUtf8("actionmute"));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/img/images/mute.jpg"), QSize(), QIcon::Normal, QIcon::Off);
-        actionmute->setIcon(icon4);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/img/images/mute.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionmute->setIcon(icon3);
         actionClose = new QAction(videos);
         actionClose->setObjectName(QString::fromUtf8("actionClose"));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/img/images/close.jpg"), QSize(), QIcon::Normal, QIcon::Off);
-        actionClose->setIcon(icon5);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/img/images/close.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionClose->setIcon(icon4);
         centralwidget = new QWidget(videos);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalSlider = new QSlider(centralwidget);
@@ -81,7 +75,7 @@ public:
         videos->setCentralWidget(centralwidget);
         menubar = new QMenuBar(videos);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1054, 26));
+        menubar->setGeometry(QRect(0, 0, 1161, 26));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuVideo = new QMenu(menubar);
@@ -96,7 +90,6 @@ public:
         menuFile->addSeparator();
         menuFile->addAction(actionopen);
         menuFile->addSeparator();
-        menuFile->addAction(actionhome);
         menuFile->addSeparator();
         menuFile->addAction(actionClose);
         menuVideo->addSeparator();
@@ -131,7 +124,6 @@ public:
 #if QT_CONFIG(tooltip)
         actionopen->setToolTip(QCoreApplication::translate("videos", "Open A File", nullptr));
 #endif // QT_CONFIG(tooltip)
-        actionhome->setText(QCoreApplication::translate("videos", "home", nullptr));
         actionmute->setText(QCoreApplication::translate("videos", "mute", nullptr));
         actionClose->setText(QCoreApplication::translate("videos", "Close", nullptr));
         menuFile->setTitle(QCoreApplication::translate("videos", "Options", nullptr));

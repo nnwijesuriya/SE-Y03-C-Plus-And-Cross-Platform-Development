@@ -27,8 +27,6 @@ private slots:
 
     void on_actionplay_triggered();
 
-    void on_actionhome_triggered();
-
     void recivedata(QString);
 
     void on_actionClose_triggered();

@@ -35,8 +35,6 @@ private slots:
 
     void on_actionstop_triggered();
 
-    void on_actionhome_triggered();
-
     void on_actionmute_triggered();
 
     void on_actionunmute_triggered();

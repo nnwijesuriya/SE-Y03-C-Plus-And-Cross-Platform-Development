@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1054</width>
-    <height>595</height>
+    <width>1161</width>
+    <height>669</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -33,7 +33,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1054</width>
+     <width>1161</width>
      <height>26</height>
     </rect>
    </property>
@@ -44,7 +44,6 @@
     <addaction name="separator"/>
     <addaction name="actionopen"/>
     <addaction name="separator"/>
-    <addaction name="actionhome"/>
     <addaction name="separator"/>
     <addaction name="actionClose"/>
    </widget>
@@ -112,15 +111,6 @@
    </property>
    <property name="toolTip">
     <string>Open A File</string>
-   </property>
-  </action>
-  <action name="actionhome">
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/img/images/home.jpg</normaloff>:/img/images/home.jpg</iconset>
-   </property>
-   <property name="text">
-    <string>home</string>
    </property>
   </action>
   <action name="actionmute">

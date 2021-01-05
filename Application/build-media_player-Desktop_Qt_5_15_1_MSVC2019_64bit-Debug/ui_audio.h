@@ -27,7 +27,6 @@ class Ui_audio
 public:
     QAction *actionplay;
     QAction *actionpause;
-    QAction *actionhome;
     QAction *actionopen;
     QAction *actionstop;
     QAction *actionmute;
@@ -57,36 +56,31 @@ public:
         QIcon icon1;
         icon1.addFile(QString::fromUtf8(":/img/images/pause.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionpause->setIcon(icon1);
-        actionhome = new QAction(audio);
-        actionhome->setObjectName(QString::fromUtf8("actionhome"));
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/img/images/home.jpg"), QSize(), QIcon::Normal, QIcon::Off);
-        actionhome->setIcon(icon2);
         actionopen = new QAction(audio);
         actionopen->setObjectName(QString::fromUtf8("actionopen"));
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/img/images/folder.jpg"), QSize(), QIcon::Normal, QIcon::Off);
-        actionopen->setIcon(icon3);
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/img/images/folder.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionopen->setIcon(icon2);
         actionstop = new QAction(audio);
         actionstop->setObjectName(QString::fromUtf8("actionstop"));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/img/images/stop.jpg"), QSize(), QIcon::Normal, QIcon::Off);
-        actionstop->setIcon(icon4);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/img/images/stop.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionstop->setIcon(icon3);
         actionmute = new QAction(audio);
         actionmute->setObjectName(QString::fromUtf8("actionmute"));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8(":/img/images/mute.jpg"), QSize(), QIcon::Normal, QIcon::Off);
-        actionmute->setIcon(icon5);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/img/images/mute.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionmute->setIcon(icon4);
         actionunmute = new QAction(audio);
         actionunmute->setObjectName(QString::fromUtf8("actionunmute"));
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/img/images/sound.jpg"), QSize(), QIcon::Normal, QIcon::Off);
-        actionunmute->setIcon(icon6);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/img/images/sound.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionunmute->setIcon(icon5);
         actionclose = new QAction(audio);
         actionclose->setObjectName(QString::fromUtf8("actionclose"));
-        QIcon icon7;
-        icon7.addFile(QString::fromUtf8(":/img/images/close.jpg"), QSize(), QIcon::Normal, QIcon::Off);
-        actionclose->setIcon(icon7);
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/img/images/close.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionclose->setIcon(icon6);
         centralwidget = new QWidget(audio);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         progress = new QSlider(centralwidget);
@@ -118,7 +112,7 @@ public:
 
         menubar->addAction(menuFile->menuAction());
         menuFile->addSeparator();
-        menuFile->addAction(actionhome);
+        menuFile->addAction(actionopen);
         menuFile->addSeparator();
         menuFile->addAction(actionclose);
         toolBar->addAction(actionopen);
@@ -153,7 +147,6 @@ public:
         audio->setWindowTitle(QCoreApplication::translate("audio", "MainWindow", nullptr));
         actionplay->setText(QCoreApplication::translate("audio", "play", nullptr));
         actionpause->setText(QCoreApplication::translate("audio", "pause", nullptr));
-        actionhome->setText(QCoreApplication::translate("audio", "Go to dashboard", nullptr));
         actionopen->setText(QCoreApplication::translate("audio", "open", nullptr));
 #if QT_CONFIG(tooltip)
         actionopen->setToolTip(QCoreApplication::translate("audio", "Open A File", nullptr));
