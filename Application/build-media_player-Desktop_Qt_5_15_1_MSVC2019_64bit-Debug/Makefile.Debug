@@ -1188,7 +1188,9 @@ debug\mainwindow.obj: ..\media_player\mainwindow.cpp ..\media_player\mainwindow.
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QPushButton \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qpushbutton.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractbutton.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QWidget
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QWidget \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QMessageBox \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qmessagebox.h
 
 debug\videos.obj: ..\media_player\videos.cpp ..\media_player\videos.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QMainWindow \
@@ -1348,7 +1350,26 @@ debug\videos.obj: ..\media_player\videos.cpp ..\media_player\videos.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qmenubar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QToolBar \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtoolbar.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QWidget
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QWidget \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QMessageBox \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qmessagebox.h \
+		..\media_player\mainwindow.h \
+		..\media_player\audio.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QListWidget \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qlistwidget.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qlistview.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qitemselectionmodel.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtGui\qvalidator.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qstyle.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtabbar.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qrubberband.h
 
 debug\qrc_entertainment.obj: debug\qrc_entertainment.cpp 
 

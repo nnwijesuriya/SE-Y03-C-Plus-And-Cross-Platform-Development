@@ -28,6 +28,7 @@ public:
     QAction *actionpause;
     QAction *actionopen;
     QAction *actionhome;
+    QAction *actionmute;
     QWidget *centralwidget;
     QSlider *verticalSlider;
     QMenuBar *menubar;
@@ -39,7 +40,7 @@ public:
     {
         if (videos->objectName().isEmpty())
             videos->setObjectName(QString::fromUtf8("videos"));
-        videos->resize(801, 595);
+        videos->resize(1054, 595);
         actionplay = new QAction(videos);
         actionplay->setObjectName(QString::fromUtf8("actionplay"));
         QIcon icon;
@@ -60,6 +61,11 @@ public:
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/img/images/home.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionhome->setIcon(icon3);
+        actionmute = new QAction(videos);
+        actionmute->setObjectName(QString::fromUtf8("actionmute"));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/img/images/mute.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionmute->setIcon(icon4);
         centralwidget = new QWidget(videos);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalSlider = new QSlider(centralwidget);
@@ -69,7 +75,7 @@ public:
         videos->setCentralWidget(centralwidget);
         menubar = new QMenuBar(videos);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 801, 26));
+        menubar->setGeometry(QRect(0, 0, 1054, 26));
         menuFile = new QMenu(menubar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuVideo = new QMenu(menubar);
@@ -83,6 +89,8 @@ public:
         menubar->addAction(menuVideo->menuAction());
         menuFile->addAction(actionhome);
         menuVideo->addAction(actionopen);
+        menuVideo->addAction(actionplay);
+        menuVideo->addAction(actionpause);
         toolBar->addSeparator();
         toolBar->addAction(actionopen);
         toolBar->addSeparator();
@@ -91,6 +99,10 @@ public:
         toolBar->addSeparator();
         toolBar->addSeparator();
         toolBar->addAction(actionpause);
+        toolBar->addSeparator();
+        toolBar->addSeparator();
+        toolBar->addAction(actionmute);
+        toolBar->addSeparator();
         toolBar->addSeparator();
 
         retranslateUi(videos);
@@ -108,6 +120,7 @@ public:
         actionopen->setToolTip(QCoreApplication::translate("videos", "Open A File", nullptr));
 #endif // QT_CONFIG(tooltip)
         actionhome->setText(QCoreApplication::translate("videos", "home", nullptr));
+        actionmute->setText(QCoreApplication::translate("videos", "mute", nullptr));
         menuFile->setTitle(QCoreApplication::translate("videos", "File", nullptr));
         menuVideo->setTitle(QCoreApplication::translate("videos", "Video", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("videos", "toolBar", nullptr));

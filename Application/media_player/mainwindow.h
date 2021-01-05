@@ -4,7 +4,6 @@
 #include "videos.h"
 #include "QListWidget"
 
-
 #include <QMainWindow>
 
 
@@ -26,6 +25,9 @@ private slots:
     void on_video_clicked();
 
     void on_entertain_itemClicked(QListWidgetItem *item);
+
+signals:
+    void senddata(QString);
 
 private:
     Ui::MainWindow *ui;

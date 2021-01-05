@@ -38,7 +38,8 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(752, 436);
+        MainWindow->resize(752, 442);
+        MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(177, 177, 177)"));
         actionGo_To_Home = new QAction(MainWindow);
         actionGo_To_Home->setObjectName(QString::fromUtf8("actionGo_To_Home"));
         QIcon icon;
@@ -48,14 +49,16 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(270, -20, 261, 91));
+        label->setGeometry(QRect(270, -10, 261, 91));
         QFont font;
         font.setFamily(QString::fromUtf8("Arial"));
-        font.setPointSize(22);
-        font.setBold(true);
-        font.setWeight(75);
+        font.setPointSize(24);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setWeight(9);
         label->setFont(font);
-        label->setStyleSheet(QString::fromUtf8(""));
+        label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
+"font: 75 24pt \"Arial\";"));
         label->setTextFormat(Qt::RichText);
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
@@ -65,23 +68,26 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         audio = new QPushButton(horizontalLayoutWidget);
         audio->setObjectName(QString::fromUtf8("audio"));
-        audio->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Arial\";"));
+        audio->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Arial\";\n"
+"background-color: rgb(83, 255, 83)"));
 
         horizontalLayout->addWidget(audio);
 
         video = new QPushButton(horizontalLayoutWidget);
         video->setObjectName(QString::fromUtf8("video"));
-        video->setStyleSheet(QString::fromUtf8("font: 16pt \"Arial\";"));
+        video->setStyleSheet(QString::fromUtf8("font: 75 16pt \"Arial\";\n"
+"background-color: rgb(83, 255, 83)"));
 
         horizontalLayout->addWidget(video);
 
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setGeometry(QRect(20, 140, 231, 41));
-        label_2->setStyleSheet(QString::fromUtf8("font: 12pt \"Arial\";"));
+        label_2->setStyleSheet(QString::fromUtf8("font: 75 12pt \"Arial\";"));
         entertain = new QListWidget(centralwidget);
         entertain->setObjectName(QString::fromUtf8("entertain"));
         entertain->setGeometry(QRect(20, 180, 711, 241));
+        entertain->setStyleSheet(QString::fromUtf8("background-color:rgb(200, 200, 200)"));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);

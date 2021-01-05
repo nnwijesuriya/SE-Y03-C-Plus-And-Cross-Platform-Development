@@ -44,7 +44,7 @@ private slots:
 private:
     Ui::audio *ui;
     QSlider* slider;
-    QMediaPlayer* player;
+    QMediaPlayer* Mplayer;
 };
 
 #endif // AUDIO_H

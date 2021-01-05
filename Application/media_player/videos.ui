@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>801</width>
+    <width>1054</width>
     <height>595</height>
    </rect>
   </property>
@@ -33,7 +33,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>801</width>
+     <width>1054</width>
      <height>26</height>
     </rect>
    </property>
@@ -48,6 +48,8 @@
      <string>Video</string>
     </property>
     <addaction name="actionopen"/>
+    <addaction name="actionplay"/>
+    <addaction name="actionpause"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuVideo"/>
@@ -70,6 +72,10 @@
    <addaction name="separator"/>
    <addaction name="separator"/>
    <addaction name="actionpause"/>
+   <addaction name="separator"/>
+   <addaction name="separator"/>
+   <addaction name="actionmute"/>
+   <addaction name="separator"/>
    <addaction name="separator"/>
   </widget>
   <action name="actionplay">
@@ -109,6 +115,15 @@
    </property>
    <property name="text">
     <string>home</string>
+   </property>
+  </action>
+  <action name="actionmute">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/mute.png</normaloff>:/img/images/mute.png</iconset>
+   </property>
+   <property name="text">
+    <string>mute</string>
    </property>
   </action>
  </widget>

@@ -7,7 +7,6 @@
 #include <QFileDialog>
 #include <QProgressBar>
 #include <QSlider>
-
 namespace Ui {
 class videos;
 }
@@ -29,11 +28,13 @@ private slots:
 
     void on_actionhome_triggered();
 
+    void recivedata(QString);
+
 private:
     Ui::videos *ui;
-    QMediaPlayer* player;
-    QVideoWidget* vw;
-    QProgressBar* bar;
+    QMediaPlayer* Mplayer;
+    QVideoWidget* Vwidget;
+    QProgressBar* Pbar;
     QSlider* slider;
 };
 
