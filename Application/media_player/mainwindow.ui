@@ -110,15 +110,6 @@ background-color: rgb(83, 255, 83)</string>
     </property>
    </widget>
   </widget>
-  <action name="actionGo_To_Home">
-   <property name="icon">
-    <iconset>
-     <normaloff>:/img/images/home.png</normaloff>:/img/images/home.png</iconset>
-   </property>
-   <property name="text">
-    <string>Home</string>
-   </property>
-  </action>
  </widget>
  <resources/>
  <connections/>

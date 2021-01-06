@@ -10,7 +10,6 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -24,7 +23,6 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
-    QAction *actionGo_To_Home;
     QWidget *centralwidget;
     QLabel *label;
     QWidget *horizontalLayoutWidget;
@@ -40,11 +38,6 @@ public:
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(752, 442);
         MainWindow->setStyleSheet(QString::fromUtf8("background-color: rgb(189, 189, 189)"));
-        actionGo_To_Home = new QAction(MainWindow);
-        actionGo_To_Home->setObjectName(QString::fromUtf8("actionGo_To_Home"));
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/img/images/home.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionGo_To_Home->setIcon(icon);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         label = new QLabel(centralwidget);
@@ -98,7 +91,6 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        actionGo_To_Home->setText(QCoreApplication::translate("MainWindow", "Home", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Media Player", nullptr));
         audio->setText(QCoreApplication::translate("MainWindow", "Audios", nullptr));
         video->setText(QCoreApplication::translate("MainWindow", "Videos", nullptr));
