@@ -1,1 +1,1 @@
-this project is developed for my final year c++ module and QT will be used to provide cross platform capabilities 
+This project is done for educational purposes not for COMMERCIAL USE, The project is a media player using the QT platform and currently is working perfectly without any bugs in the windows and Ubantu Linux operating systems.
