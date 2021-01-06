@@ -192,9 +192,12 @@ release\qrc_entertainment.cpp: ..\media_player\entertainment.qrc \
 release\qrc_images.cpp: ..\media_player\images.qrc \
 		C:\Qt\5.15.1\msvc2019_64\bin\rcc.exe \
 		..\media_player\images\play.png \
+		..\media_player\images\reduce.jpg \
+		..\media_player\images\normal.jpg \
 		..\media_player\images\video.png \
 		..\media_player\images\pause.jpg \
 		..\media_player\images\folder.jpg \
+		..\media_player\images\increase.jpg \
 		..\media_player\images\stop.jpg \
 		..\media_player\images\sound.jpg \
 		..\media_player\images\close.jpg \
@@ -841,7 +844,8 @@ release\audio.obj: ..\media_player\audio.cpp ..\media_player\audio.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qmenubar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QToolBar \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtoolbar.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QWidget
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QWidget \
+		C:\Qt\5.15.1\msvc2019_64\include\QtGui\QCloseEvent
 
 release\main.obj: ..\media_player\main.cpp ..\media_player\mainwindow.h \
 		..\media_player\audio.h \
@@ -1168,9 +1172,6 @@ release\mainwindow.obj: ..\media_player\mainwindow.cpp ..\media_player\mainwindo
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtabbar.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qrubberband.h \
 		ui_mainwindow.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QAction \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qaction.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qactiongroup.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\QApplication \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qapplication.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qcoreapplication.h \
@@ -1371,7 +1372,8 @@ release\videos.obj: ..\media_player\videos.cpp ..\media_player\videos.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtCore\qregularexpression.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qstyle.h \
 		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qtabbar.h \
-		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qrubberband.h
+		C:\Qt\5.15.1\msvc2019_64\include\QtWidgets\qrubberband.h \
+		C:\Qt\5.15.1\msvc2019_64\include\QtGui\QCloseEvent
 
 release\qrc_entertainment.obj: release\qrc_entertainment.cpp 
 

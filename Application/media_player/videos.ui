@@ -55,9 +55,22 @@
     <addaction name="actionplay"/>
     <addaction name="separator"/>
     <addaction name="actionpause"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuPlayBAck">
+    <property name="title">
+     <string>PlayBack</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionIncrease_Playback"/>
+    <addaction name="separator"/>
+    <addaction name="actionNormal_Speed"/>
+    <addaction name="separator"/>
+    <addaction name="actionReduce_Speed"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuVideo"/>
+   <addaction name="menuPlayBAck"/>
   </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
@@ -129,6 +142,33 @@
    </property>
    <property name="text">
     <string>Close</string>
+   </property>
+  </action>
+  <action name="actionIncrease_Playback">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/increase.jpg</normaloff>:/img/images/increase.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Increase speed</string>
+   </property>
+  </action>
+  <action name="actionReduce_Speed">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/reduce.jpg</normaloff>:/img/images/reduce.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Reduce Speed</string>
+   </property>
+  </action>
+  <action name="actionNormal_Speed">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/img/images/normal.jpg</normaloff>:/img/images/normal.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>Normal Speed</string>
    </property>
   </action>
  </widget>

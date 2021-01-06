@@ -93,3 +93,18 @@ void videos::on_actionmute_triggered()
 {
     Mplayer->setVolume(0);
 }
+
+void videos::on_actionIncrease_Playback_triggered()
+{
+    Mplayer->setPlaybackRate(1.5);
+}
+
+void videos::on_actionReduce_Speed_triggered()
+{
+    Mplayer->setPlaybackRate(0.5);
+}
+
+void videos::on_actionNormal_Speed_triggered()
+{
+    Mplayer->setPlaybackRate(1.0);
+}

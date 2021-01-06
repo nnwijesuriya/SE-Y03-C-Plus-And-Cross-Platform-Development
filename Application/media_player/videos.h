@@ -35,6 +35,12 @@ private slots:
 
     void on_actionmute_triggered();
 
+    void on_actionIncrease_Playback_triggered();
+
+    void on_actionReduce_Speed_triggered();
+
+    void on_actionNormal_Speed_triggered();
+
 private:
     Ui::videos *ui;
     QMediaPlayer* Mplayer;

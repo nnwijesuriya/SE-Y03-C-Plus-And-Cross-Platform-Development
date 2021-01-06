@@ -9,5 +9,8 @@
         <file>images/mute.jpg</file>
         <file>images/home.jpg</file>
         <file>images/close.jpg</file>
+        <file>images/increase.jpg</file>
+        <file>images/reduce.jpg</file>
+        <file>images/normal.jpg</file>
     </qresource>
 </RCC>

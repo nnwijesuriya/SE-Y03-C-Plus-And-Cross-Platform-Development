@@ -29,11 +29,15 @@ public:
     QAction *actionopen;
     QAction *actionmute;
     QAction *actionClose;
+    QAction *actionIncrease_Playback;
+    QAction *actionReduce_Speed;
+    QAction *actionNormal_Speed;
     QWidget *centralwidget;
     QSlider *verticalSlider;
     QMenuBar *menubar;
     QMenu *menuFile;
     QMenu *menuVideo;
+    QMenu *menuPlayBAck;
     QToolBar *toolBar;
 
     void setupUi(QMainWindow *videos)
@@ -66,6 +70,21 @@ public:
         QIcon icon4;
         icon4.addFile(QString::fromUtf8(":/img/images/close.jpg"), QSize(), QIcon::Normal, QIcon::Off);
         actionClose->setIcon(icon4);
+        actionIncrease_Playback = new QAction(videos);
+        actionIncrease_Playback->setObjectName(QString::fromUtf8("actionIncrease_Playback"));
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/img/images/increase.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionIncrease_Playback->setIcon(icon5);
+        actionReduce_Speed = new QAction(videos);
+        actionReduce_Speed->setObjectName(QString::fromUtf8("actionReduce_Speed"));
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/img/images/reduce.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionReduce_Speed->setIcon(icon6);
+        actionNormal_Speed = new QAction(videos);
+        actionNormal_Speed->setObjectName(QString::fromUtf8("actionNormal_Speed"));
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/img/images/normal.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        actionNormal_Speed->setIcon(icon7);
         centralwidget = new QWidget(videos);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalSlider = new QSlider(centralwidget);
@@ -80,6 +99,8 @@ public:
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuVideo = new QMenu(menubar);
         menuVideo->setObjectName(QString::fromUtf8("menuVideo"));
+        menuPlayBAck = new QMenu(menubar);
+        menuPlayBAck->setObjectName(QString::fromUtf8("menuPlayBAck"));
         videos->setMenuBar(menubar);
         toolBar = new QToolBar(videos);
         toolBar->setObjectName(QString::fromUtf8("toolBar"));
@@ -87,6 +108,7 @@ public:
 
         menubar->addAction(menuFile->menuAction());
         menubar->addAction(menuVideo->menuAction());
+        menubar->addAction(menuPlayBAck->menuAction());
         menuFile->addSeparator();
         menuFile->addAction(actionopen);
         menuFile->addSeparator();
@@ -96,6 +118,13 @@ public:
         menuVideo->addAction(actionplay);
         menuVideo->addSeparator();
         menuVideo->addAction(actionpause);
+        menuVideo->addSeparator();
+        menuPlayBAck->addSeparator();
+        menuPlayBAck->addAction(actionIncrease_Playback);
+        menuPlayBAck->addSeparator();
+        menuPlayBAck->addAction(actionNormal_Speed);
+        menuPlayBAck->addSeparator();
+        menuPlayBAck->addAction(actionReduce_Speed);
         toolBar->addSeparator();
         toolBar->addAction(actionopen);
         toolBar->addSeparator();
@@ -126,8 +155,12 @@ public:
 #endif // QT_CONFIG(tooltip)
         actionmute->setText(QCoreApplication::translate("videos", "mute", nullptr));
         actionClose->setText(QCoreApplication::translate("videos", "Close", nullptr));
+        actionIncrease_Playback->setText(QCoreApplication::translate("videos", "Increase speed", nullptr));
+        actionReduce_Speed->setText(QCoreApplication::translate("videos", "Reduce Speed", nullptr));
+        actionNormal_Speed->setText(QCoreApplication::translate("videos", "Normal Speed", nullptr));
         menuFile->setTitle(QCoreApplication::translate("videos", "Options", nullptr));
         menuVideo->setTitle(QCoreApplication::translate("videos", "Video", nullptr));
+        menuPlayBAck->setTitle(QCoreApplication::translate("videos", "PlayBack", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("videos", "toolBar", nullptr));
     } // retranslateUi
 
