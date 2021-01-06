@@ -2,15 +2,14 @@
     <qresource prefix="/img">
         <file>images/play.png</file>
         <file>images/video.png</file>
-        <file>images/pause.jpg</file>
         <file>images/folder.jpg</file>
-        <file>images/stop.jpg</file>
-        <file>images/sound.jpg</file>
-        <file>images/mute.jpg</file>
-        <file>images/home.jpg</file>
-        <file>images/close.jpg</file>
         <file>images/increase.jpg</file>
         <file>images/reduce.jpg</file>
-        <file>images/normal.jpg</file>
+        <file>images/close.png</file>
+        <file>images/mute.png</file>
+        <file>images/normal.png</file>
+        <file>images/pause.png</file>
+        <file>images/stop.png</file>
+        <file>images/unmute.png</file>
     </qresource>
 </RCC>

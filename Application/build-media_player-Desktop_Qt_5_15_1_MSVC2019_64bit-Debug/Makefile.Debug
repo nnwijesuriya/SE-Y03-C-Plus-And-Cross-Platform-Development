@@ -192,18 +192,17 @@ debug\qrc_entertainment.cpp: ..\media_player\entertainment.qrc \
 
 debug\qrc_images.cpp: ..\media_player\images.qrc \
 		C:\Qt\5.15.1\msvc2019_64\bin\rcc.exe \
+		..\media_player\images\unmute.png \
+		..\media_player\images\close.png \
+		..\media_player\images\stop.png \
 		..\media_player\images\play.png \
 		..\media_player\images\reduce.jpg \
-		..\media_player\images\normal.jpg \
+		..\media_player\images\mute.png \
 		..\media_player\images\video.png \
-		..\media_player\images\pause.jpg \
 		..\media_player\images\folder.jpg \
 		..\media_player\images\increase.jpg \
-		..\media_player\images\stop.jpg \
-		..\media_player\images\sound.jpg \
-		..\media_player\images\close.jpg \
-		..\media_player\images\mute.jpg \
-		..\media_player\images\home.jpg
+		..\media_player\images\normal.png \
+		..\media_player\images\pause.png
 	C:\Qt\5.15.1\msvc2019_64\bin\rcc.exe -name images ..\media_player\images.qrc -o debug\qrc_images.cpp
 
 compiler_moc_predefs_make_all: debug\moc_predefs.h

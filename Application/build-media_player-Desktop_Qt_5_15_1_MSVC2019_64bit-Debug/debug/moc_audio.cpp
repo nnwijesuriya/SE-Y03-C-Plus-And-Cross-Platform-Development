@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../media_player/audio.h"
+#include "../../../xdd/media_player/audio.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

@@ -137,7 +137,7 @@
   <action name="actionpause">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/pause.jpg</normaloff>:/img/images/pause.jpg</iconset>
+     <normaloff>:/img/images/pause.png</normaloff>:/img/images/pause.png</iconset>
    </property>
    <property name="text">
     <string>pause</string>
@@ -158,7 +158,7 @@
   <action name="actionstop">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/stop.jpg</normaloff>:/img/images/stop.jpg</iconset>
+     <normaloff>:/img/images/stop.png</normaloff>:/img/images/stop.png</iconset>
    </property>
    <property name="text">
     <string>stop</string>
@@ -167,7 +167,7 @@
   <action name="actionmute">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/mute.jpg</normaloff>:/img/images/mute.jpg</iconset>
+     <normaloff>:/img/images/mute.png</normaloff>:/img/images/mute.png</iconset>
    </property>
    <property name="text">
     <string>mute</string>
@@ -176,7 +176,7 @@
   <action name="actionunmute">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/sound.jpg</normaloff>:/img/images/sound.jpg</iconset>
+     <normaloff>:/img/images/unmute.png</normaloff>:/img/images/unmute.png</iconset>
    </property>
    <property name="text">
     <string>unmute</string>
@@ -185,7 +185,7 @@
   <action name="actionclose">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/close.jpg</normaloff>:/img/images/close.jpg</iconset>
+     <normaloff>:/img/images/close.png</normaloff>:/img/images/close.png</iconset>
    </property>
    <property name="text">
     <string>Close</string>

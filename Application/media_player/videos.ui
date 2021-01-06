@@ -108,7 +108,7 @@
   <action name="actionpause">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/pause.jpg</normaloff>:/img/images/pause.jpg</iconset>
+     <normaloff>:/img/images/pause.png</normaloff>:/img/images/pause.png</iconset>
    </property>
    <property name="text">
     <string>pause</string>
@@ -129,7 +129,7 @@
   <action name="actionmute">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/mute.jpg</normaloff>:/img/images/mute.jpg</iconset>
+     <normaloff>:/img/images/mute.png</normaloff>:/img/images/mute.png</iconset>
    </property>
    <property name="text">
     <string>mute</string>
@@ -138,7 +138,7 @@
   <action name="actionClose">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/close.jpg</normaloff>:/img/images/close.jpg</iconset>
+     <normaloff>:/img/images/close.png</normaloff>:/img/images/close.png</iconset>
    </property>
    <property name="text">
     <string>Close</string>
@@ -165,7 +165,7 @@
   <action name="actionNormal_Speed">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/img/images/normal.jpg</normaloff>:/img/images/normal.jpg</iconset>
+     <normaloff>:/img/images/normal.png</normaloff>:/img/images/normal.png</iconset>
    </property>
    <property name="text">
     <string>Normal Speed</string>

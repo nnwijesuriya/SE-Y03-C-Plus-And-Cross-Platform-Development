@@ -53,7 +53,7 @@ public:
         actionpause = new QAction(videos);
         actionpause->setObjectName(QString::fromUtf8("actionpause"));
         QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/img/images/pause.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QString::fromUtf8(":/img/images/pause.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionpause->setIcon(icon1);
         actionopen = new QAction(videos);
         actionopen->setObjectName(QString::fromUtf8("actionopen"));
@@ -63,12 +63,12 @@ public:
         actionmute = new QAction(videos);
         actionmute->setObjectName(QString::fromUtf8("actionmute"));
         QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/img/images/mute.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon3.addFile(QString::fromUtf8(":/img/images/mute.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionmute->setIcon(icon3);
         actionClose = new QAction(videos);
         actionClose->setObjectName(QString::fromUtf8("actionClose"));
         QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/img/images/close.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QString::fromUtf8(":/img/images/close.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionClose->setIcon(icon4);
         actionIncrease_Playback = new QAction(videos);
         actionIncrease_Playback->setObjectName(QString::fromUtf8("actionIncrease_Playback"));
@@ -83,7 +83,7 @@ public:
         actionNormal_Speed = new QAction(videos);
         actionNormal_Speed->setObjectName(QString::fromUtf8("actionNormal_Speed"));
         QIcon icon7;
-        icon7.addFile(QString::fromUtf8(":/img/images/normal.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        icon7.addFile(QString::fromUtf8(":/img/images/normal.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionNormal_Speed->setIcon(icon7);
         centralwidget = new QWidget(videos);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
