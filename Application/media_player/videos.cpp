@@ -88,3 +88,8 @@ void videos::closeEvent (QCloseEvent *event)
     Mplayer->stop();
     event->accept();
 }
+//mutes the video file
+void videos::on_actionmute_triggered()
+{
+    Mplayer->setVolume(0);
+}

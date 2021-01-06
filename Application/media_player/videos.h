@@ -33,6 +33,8 @@ private slots:
 
     void closeEvent(QCloseEvent *event);
 
+    void on_actionmute_triggered();
+
 private:
     Ui::videos *ui;
     QMediaPlayer* Mplayer;
